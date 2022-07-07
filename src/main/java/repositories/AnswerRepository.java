@@ -1,4 +1,4 @@
-package models;
+package repositories;
 
-public class Answer {
+public class AnswerRepository {
 }

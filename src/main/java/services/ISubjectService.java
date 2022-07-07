@@ -1,2 +1,4 @@
-package services;public interface ISubjectService {
+package services;
+
+public interface ISubjectService {
 }

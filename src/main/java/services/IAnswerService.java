@@ -1,2 +1,4 @@
-package services;public class IAnswerService {
+package services;
+
+public interface IAnswerService {
 }

@@ -1,2 +1,4 @@
-package services.impl;public class IRoleService {
+package services;
+
+public interface IRoleService {
 }

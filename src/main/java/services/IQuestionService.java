@@ -1,2 +1,4 @@
-package services;public interface IQuestionService {
+package services;
+
+public interface IQuestionService {
 }
