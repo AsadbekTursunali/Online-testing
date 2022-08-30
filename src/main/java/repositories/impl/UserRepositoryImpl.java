@@ -2,12 +2,12 @@ package repositories.impl;
 
 import models.Role;
 import models.User;
-import repositories.IUserRepository;
+import repositories.UserRepository;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class UserRepositoryImpl implements IUserRepository {
+public class UserRepositoryImpl implements UserRepository {
     public static List<User> users = new LinkedList<>();
 
     public static void save() {

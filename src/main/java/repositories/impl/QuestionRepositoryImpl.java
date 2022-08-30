@@ -2,12 +2,12 @@ package repositories.impl;
 
 import models.Question;
 import models.Subject;
-import repositories.IQuestionRepository;
+import repositories.QuestionRepository;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class QuestionRepositoryImpl implements IQuestionRepository {
+public class QuestionRepositoryImpl implements QuestionRepository {
 
     public static List<Question> questions = new LinkedList<>();
     public static List<Subject> subjects = SubjectRepositoryImpl.getSubjects();

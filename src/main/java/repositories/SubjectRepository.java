@@ -1,5 +1,5 @@
 package repositories;
 
-public interface ISubjectRepository {
+public interface SubjectRepository {
     void add(String subjectName);
 }

@@ -1,12 +1,12 @@
 package repositories.impl;
 
 import models.Subject;
-import repositories.ISubjectRepository;
+import repositories.SubjectRepository;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class SubjectRepositoryImpl implements ISubjectRepository {
+public class SubjectRepositoryImpl implements SubjectRepository {
 
     public static List<Subject> subjects = new LinkedList<>();
 

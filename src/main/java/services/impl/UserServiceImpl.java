@@ -4,13 +4,12 @@ package services.impl;
 import controller.RoleController;
 import models.Role;
 import models.User;
-import repositories.impl.RoleRepositoryImpl;
 import repositories.impl.UserRepositoryImpl;
-import services.IUserService;
+import services.UserService;
 
 import java.util.List;
 
-public class UserServiceImpl implements IUserService {
+public class UserServiceImpl implements UserService {
 
     List<User> users = UserRepositoryImpl.getUsers();
     RoleController roleController = new RoleController();
@@ -20,8 +19,7 @@ public class UserServiceImpl implements IUserService {
         boolean isExistUser = checkExistUser(usernameOrEmail, password);
         if (isExistUser) {
             for (User user : users) {
-                if (usernameOrEmail.equalsIgnoreCase(user.getUsername())
-                        || usernameOrEmail.equalsIgnoreCase(user.getEmail())) {
+                if (user.getUsername().equalsIgnoreCase(usernameOrEmail)) {
                     roleController.signIn(user);
                     return;
                 }
@@ -41,10 +39,10 @@ public class UserServiceImpl implements IUserService {
 
     // This method checks for existing users
     private boolean checkExistUser(String usernameOrEmail, String password) {
-        for (User user : users) {
-            if (usernameOrEmail.equalsIgnoreCase(user.getUsername())
-                    || usernameOrEmail.equalsIgnoreCase(user.getEmail())
-                    && password.equals(user.getPassword())) {
+        for (User userItems : users) {
+            if ((userItems.getUsername().equalsIgnoreCase(usernameOrEmail)
+                    || userItems.getEmail().equalsIgnoreCase(usernameOrEmail))
+                    && userItems.getPassword().equals(password)) {
                 return true;
             }
         }

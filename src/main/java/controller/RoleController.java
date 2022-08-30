@@ -21,7 +21,7 @@ public class RoleController {
         } else if (user.getRole().getName().equalsIgnoreCase("student")) {
             studentService.student(user);
         } else {
-            System.out.println("This role doesn't exist!");
+            System.out.println("This role doesn't exist!\n");
         }
     }
 
@@ -33,7 +33,7 @@ public class RoleController {
         } else if (user.getRole().getName().equalsIgnoreCase("student")) {
             studentService.student(user);
         }else {
-            System.out.println("This role doesn't exist!");
+            System.out.println("This role doesn't exist!\n");
         }
     }
 }

@@ -2,14 +2,14 @@ package controller;
 
 import repositories.impl.RoleRepositoryImpl;
 import repositories.impl.UserRepositoryImpl;
-import services.IUserService;
+import services.UserService;
 import services.impl.UserServiceImpl;
 
 import java.util.Scanner;
 
 public class UserController {
 
-    IUserService userService = new UserServiceImpl();
+    UserService userService = new UserServiceImpl();
     Scanner scanner = new Scanner(System.in);
 
     public void register() {

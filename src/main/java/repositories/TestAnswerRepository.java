@@ -2,7 +2,7 @@ package repositories;
 
 import models.Question;
 
-public interface ITestAnswerRepository {
+public interface TestAnswerRepository {
 
     void add(Question questionById, String testAnswer);
 }
